@@ -1,6 +1,5 @@
 package water.android.io.a14.c_14_2;
 
-import java.io.File;
 import java.lang.reflect.Field;
 
 /**
@@ -9,6 +8,10 @@ import java.lang.reflect.Field;
 public class ToyTest {
 
     public static void main(String[] args) {
+
+        /**
+         * 反射获取类对象
+         */
         Class c = null;
         try {
             c = Class.forName("water.android.io.a14.c_14_2.FancyToy");
@@ -17,8 +20,14 @@ public class ToyTest {
             System.exit(0);
         }
 
+        /**
+         * 通过类对象获取基本信息
+         */
         printInfo(c);
 
+        /**
+         * 类接口名字打印
+         */
         System.out.println("=======================");
         for (Class face : c.getInterfaces()) {
             printInfo(face);
@@ -27,7 +36,9 @@ public class ToyTest {
         Class up = c.getSuperclass();
 
         Object obj = null;
-
+        /**
+         * 调用无参构造函数
+         */
         try {
             obj = up.newInstance();
         } catch (IllegalAccessException e) {
@@ -38,7 +49,9 @@ public class ToyTest {
 
         System.out.println("=======================");
         printInfo(obj.getClass());
-
+        /**
+         * 通过类对象获取类中属性名字
+         */
        for(Field file:c.getDeclaredFields()){
            System.out.println("file Name:"+file.getName());
        }

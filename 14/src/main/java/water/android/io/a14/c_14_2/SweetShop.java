@@ -30,7 +30,7 @@ public class SweetShop {
         System.out.println("After creating Candy");
 
         try {
-            Class.forName("Gum");
+            Class.forName("water.android.io.a14.c_14_2.Gum");
         } catch (Exception e) {
             e.printStackTrace();
         }
