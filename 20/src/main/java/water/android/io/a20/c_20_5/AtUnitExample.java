@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import sun.misc.OSEnvironment;
 
+/**
+ * 关于JUnit
+ */
 public class AtUnitExample {
     public String methodOne() {
         return "This is methodOne.";
