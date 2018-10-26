@@ -1,1 +1,8 @@
-include ':app', ':chapter_20', ':chapter_21', ':chapter_14', ':chapter_22', ':pattern_builder', ':pattern_singleton', ':pattern_stragegy'
+include ':app',
+        ':classicBook:chapter_20',
+        ':classicBook:chapter_21',
+        ':classicBook:chapter_14',
+        ':classicBook:chapter_22',
+        ':pattern_builder',
+        ':pattern_singleton',
+        ':pattern_stragegy'
