@@ -41,7 +41,6 @@ class SimpleProxy implements Interface {
     private Interface anInterface;
 
     public SimpleProxy(Interface anInterface) {
-
         this.anInterface = anInterface;
     }
 
