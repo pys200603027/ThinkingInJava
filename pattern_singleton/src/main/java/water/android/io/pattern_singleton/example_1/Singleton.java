@@ -1,7 +1,7 @@
 package water.android.io.pattern_singleton.example_1;
 
 /**
- * 典型的单例模式
+ * Double Check
  */
 public class Singleton {
 
