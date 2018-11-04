@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':pattern_factory',
         ':classicBook:chapter_20',
         ':classicBook:chapter_21',
         ':classicBook:chapter_14',
