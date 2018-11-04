@@ -4,7 +4,9 @@ package water.android.io.pattern_singleton.example_1;
  * Double Check
  */
 public class Singleton {
-
+    /**
+     * 注意加入volatile
+     */
     private static volatile Singleton singleton;
 
     private Singleton() {

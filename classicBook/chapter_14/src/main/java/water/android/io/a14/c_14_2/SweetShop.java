@@ -7,6 +7,10 @@ class Candy {
     static {
         System.out.println("Loading Candy");
     }
+
+    public Candy() {
+        System.out.println("Candy Constructor.");
+    }
 }
 
 class Gum {
