@@ -1,4 +1,4 @@
-package water.android.io.pattern_factory.example_1;
+package water.android.io.pattern_factory.example_1.factory;
 
 import water.android.io.pattern_factory.example_1.bean.HatchbackCar;
 import water.android.io.pattern_factory.example_1.bean.ICar;
