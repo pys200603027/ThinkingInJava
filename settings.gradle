@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':pattern_comand',
         ':statemathine',
         ':classicBook:chapter_20',
         ':classicBook:chapter_21',
@@ -7,4 +7,5 @@ include ':app',
         ':designPattern:pattern_factory',
         ':designPattern:pattern_builder',
         ':designPattern:pattern_singleton',
-        ':designPattern:pattern_stragegy'
+        ':designPattern:pattern_stragegy',
+        ':designPattern:pattern_temple'
