@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':pattern_mediator',
         ':statemathine',
         ':classicBook:chapter_20',
         ':classicBook:chapter_21',
