@@ -1,4 +1,4 @@
-package water.android.io.pattern.mediator.example3;
+package water.android.io.pattern.mediator.example3.colleague;
 
 public class Monitor extends Colleague {
 
@@ -7,7 +7,7 @@ public class Monitor extends Colleague {
     }
 
     @Override
-    void talk() {
+    public void talk() {
         System.out.println("大班长说:" + getCentent());
     }
 }

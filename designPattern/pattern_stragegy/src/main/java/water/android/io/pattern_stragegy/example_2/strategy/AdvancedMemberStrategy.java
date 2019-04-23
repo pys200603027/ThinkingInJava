@@ -1,4 +1,4 @@
-package water.android.io.pattern_stragegy.example_2;
+package water.android.io.pattern_stragegy.example_2.strategy;
 
 /**
  * 高级会员

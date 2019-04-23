@@ -1,5 +1,7 @@
 package water.android.io.pattern.mediator.example3;
 
+import water.android.io.pattern.mediator.example3.colleague.Colleague;
+
 /**
  * QQ中介者
  */

@@ -2,13 +2,10 @@ package junit;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-
-import water.android.io.pattern_stragegy.example_2.AdvancedMemberStrategy;
-import water.android.io.pattern_stragegy.example_2.IntermediateMemberStrategy;
+import water.android.io.pattern_stragegy.example_2.strategy.AdvancedMemberStrategy;
+import water.android.io.pattern_stragegy.example_2.strategy.IntermediateMemberStrategy;
 import water.android.io.pattern_stragegy.example_2.Price;
-import water.android.io.pattern_stragegy.example_2.PrimaryMemberStrategy;
+import water.android.io.pattern_stragegy.example_2.strategy.PrimaryMemberStrategy;
 
 public class TestPrice {
     @Test

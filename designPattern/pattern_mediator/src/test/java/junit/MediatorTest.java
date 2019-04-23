@@ -10,10 +10,10 @@ import water.android.io.pattern.mediator.example1.Mediator;
 import water.android.io.pattern.mediator.example2.Emei;
 import water.android.io.pattern.mediator.example2.Wudang;
 import water.android.io.pattern.mediator.example2.WulinMaster;
-import water.android.io.pattern.mediator.example3.Monitor;
+import water.android.io.pattern.mediator.example3.colleague.Monitor;
 import water.android.io.pattern.mediator.example3.QQMediator;
-import water.android.io.pattern.mediator.example3.StudentA;
-import water.android.io.pattern.mediator.example3.TuanZhiShu;
+import water.android.io.pattern.mediator.example3.colleague.StudentA;
+import water.android.io.pattern.mediator.example3.colleague.TuanZhiShu;
 
 public class MediatorTest {
 
@@ -26,8 +26,8 @@ public class MediatorTest {
         Colleague colleagueB = new ConcreteColleagueB();
 
         Mediator mediator = new ConcreteMediator(colleagueA, colleagueB);
-        colleagueA.setMediator(mediator);
-        colleagueB.setMediator(mediator);
+        colleagueA.addMediator(mediator);
+        colleagueB.addMediator(mediator);
 
         ((ConcreteColleagueA) colleagueA).notifyColleagueB();
         ((ConcreteColleagueB) colleagueB).notifyColleagueA();
@@ -47,6 +47,9 @@ public class MediatorTest {
         emei.sendNoticeToMaster("峨眉弟子被少林大力金刚指所杀");
     }
 
+    /**
+     * 发布广播
+     */
     @Test
     public void test3() {
         QQMediator mediator = new QQMediator();
@@ -64,6 +67,9 @@ public class MediatorTest {
         mediator.broadCast(studentMonitor);
     }
 
+    /**
+     * 建立私聊
+     */
     @Test
     public void test4() {
         QQMediator mediator = new QQMediator();
@@ -76,6 +82,6 @@ public class MediatorTest {
         studentMonitor.setCentent("你觉得咱们“软件项目管理老师”讲的怎么样？");
         studentA.setCentent("我觉得讲的不够生动，还点名，不太好!!");
 
-        mediator.privateChart(studentMonitor,studentA);
+        mediator.privateChart(studentMonitor, studentA);
     }
 }

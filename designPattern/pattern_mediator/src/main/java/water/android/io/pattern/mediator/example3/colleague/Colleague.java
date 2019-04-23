@@ -1,5 +1,8 @@
-package water.android.io.pattern.mediator.example3;
+package water.android.io.pattern.mediator.example3.colleague;
 
+/**
+ * 大学生
+ */
 public abstract class Colleague {
 
     private String name;
@@ -25,5 +28,8 @@ public abstract class Colleague {
         this.centent = centent;
     }
 
-    abstract void talk();
+    /**
+     * 发表言论
+     */
+    public abstract void talk();
 }
