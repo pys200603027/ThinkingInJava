@@ -12,4 +12,5 @@ include ':app',
         ':designPattern:pattern_builder',
         ':designPattern:pattern_singleton',
         ':designPattern:pattern_stragegy',
-        ':designPattern:pattern_temple'
+        ':designPattern:pattern_temple',
+        ':designPattern:pattern_observer'
