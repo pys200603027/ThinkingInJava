@@ -15,4 +15,5 @@ include ':app',
         ':designPattern:pattern_temple',
         ':designPattern:pattern_observer',
         ':designPattern:pattern_visitor',
+        ':designPattern:pattern_composite',
         ':designPattern:pattern_memento'
