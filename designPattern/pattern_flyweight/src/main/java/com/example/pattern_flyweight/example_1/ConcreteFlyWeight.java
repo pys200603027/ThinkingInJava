@@ -1,4 +1,4 @@
-package com.example.pattern_facade.example_1;
+package com.example.pattern_flyweight.example_1;
 
 public class ConcreteFlyWeight extends FlyWeight {
 
