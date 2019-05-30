@@ -1,4 +1,5 @@
 include ':app',
+        ':dataStructure:LinkedList',
         ':classicBook:chapter_20',
         ':classicBook:chapter_21',
         ':classicBook:chapter_14',
