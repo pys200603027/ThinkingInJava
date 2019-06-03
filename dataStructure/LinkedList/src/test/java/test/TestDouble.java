@@ -2,6 +2,7 @@ package test;
 
 import com.example.linkedlist.dble.DoublePointLinkedList;
 import com.example.linkedlist.dble.QueueLinkedList;
+import com.example.linkedlist.dble.TwoWayLinkedList;
 
 import org.junit.Test;
 
@@ -53,5 +54,28 @@ public class TestDouble {
 
         queueLinkedList.delete();
         queueLinkedList.display();
+    }
+
+    /**
+     * 双向链表
+     */
+    @Test
+    public void test4() {
+        TwoWayLinkedList wayLinkedList = new TwoWayLinkedList();
+        wayLinkedList.addHead("A");
+        wayLinkedList.addHead("B");
+        wayLinkedList.addHead("C");
+        wayLinkedList.addHead("D");
+        wayLinkedList.addTail("Z");
+        wayLinkedList.addTail("X");
+        wayLinkedList.addTail("V");
+
+        wayLinkedList.display();
+
+        wayLinkedList.deleteHead();
+        wayLinkedList.display();
+
+        wayLinkedList.deleteTail();
+        wayLinkedList.display();
     }
 }
