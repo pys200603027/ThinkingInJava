@@ -32,6 +32,20 @@ public class SingleLinkedList {
         return obj;
     }
 
+    public Node find(Object obj) {
+        Node current = head;
+        int tempSize = size;
+        while (tempSize > 0) {
+            if (obj.equals(current.getData())) {
+                return current;
+            } else {
+                current = head.getNext();
+            }
+            tempSize--;
+        }
+        return null;
+    }
+
     /**
      * 删除头部元素
      *
