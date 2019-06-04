@@ -3,12 +3,12 @@ package com.example.pattern_bridge.example_1;
 /**
  * 基本实现类
  */
-public class StringDisplayImpl extends DisplayImpl {
+public class StringDisplayRaw extends DisplayRaw {
 
     private String string;
     private int width;
 
-    public StringDisplayImpl(String string) {
+    public StringDisplayRaw(String string) {
         this.string = string;
         this.width = string.length();
     }

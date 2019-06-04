@@ -1,6 +1,6 @@
 package com.example.pattern_bridge.example_1;
 
-public abstract class DisplayImpl {
+public abstract class DisplayRaw {
 
     public abstract void rawOpen();
 

@@ -1,12 +1,12 @@
 package com.example.pattern_bridge.example_1.bridge;
 
-import com.example.pattern_bridge.example_1.DisplayImpl;
+import com.example.pattern_bridge.example_1.DisplayRaw;
 
 /**
  * 继续扩展父类
  */
 public class CountDisplay extends Display {
-    public CountDisplay(DisplayImpl impl) {
+    public CountDisplay(DisplayRaw impl) {
         super(impl);
     }
 

@@ -1,14 +1,14 @@
 package com.example.pattern_bridge.example_1.bridge;
 
-import com.example.pattern_bridge.example_1.DisplayImpl;
+import com.example.pattern_bridge.example_1.DisplayRaw;
 
 /**
  * bridge 同时扩展类
  */
 public class Display {
-    private DisplayImpl impl;
+    private DisplayRaw impl;
 
-    public Display(DisplayImpl impl) {
+    public Display(DisplayRaw impl) {
         this.impl = impl;
     }
 
