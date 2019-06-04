@@ -108,29 +108,4 @@ public class IOTest {
         System.out.println(size[0] + "," + size[1]);
     }
 
-    /**
-     * 测试数组随机
-     */
-    @Test
-    public void testRandomArray() {
-        Random random = new Random();
-        List<Integer> arrays = new ArrayList<>();
-        arrays.add(0);
-        arrays.add(1);
-
-        for (int n = 0; n < 100; n++) {
-            int i = random.nextInt(arrays.size());
-            System.out.println(i);
-        }
-    }
-
-    /**
-     * 测试表情长度
-     */
-    @Test
-    public void testEmojLenght() {
-        String s = "你👫好dddddwerer";
-
-        System.out.println(s.length());
-    }
 }
