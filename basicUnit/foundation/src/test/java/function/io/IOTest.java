@@ -108,4 +108,19 @@ public class IOTest {
         System.out.println(size[0] + "," + size[1]);
     }
 
+    @Test
+    public void testFileLastof() {
+        String fileName = "test.png";
+        System.out.println(fileName.lastIndexOf("."));
+
+        String suffix = fileName.substring(fileName.lastIndexOf("."), fileName.length());
+        System.out.println(suffix);
+
+
+        fileName = fileName.replace(suffix, ".9" + suffix);
+        System.out.println(fileName);
+
+
+    }
+
 }
