@@ -113,4 +113,125 @@ public class TimeUtils {
         return String.valueOf(time);
     }
 
+
+    /**
+     * 20天
+     */
+    public static final int DAY_20 = 20 * 24 * 60 * 60 * 1000;
+
+    /**
+     * 13天
+     */
+    public static final int DAY_13 = 13 * 24 * 60 * 60 * 1000;
+
+    /**
+     * 7天
+     */
+    public static final int DAY_7 = 7 * 24 * 60 * 60 * 1000;
+    /**
+     * 1天
+     */
+    public static final int DAY_1 = 1 * 24 * 60 * 60 * 1000;
+    /**
+     * 1小时
+     */
+    public static final int HOUR_1 = 60 * 60 * 1000;
+
+    /**
+     * 30分钟
+     */
+    public static final int MINUTE_30 = 30 * 60 * 1000;
+
+    /**
+     * 1分钟
+     */
+    public static final int MINUTE_1 = 60 * 1000;
+
+    /**
+     * 30秒
+     */
+    public static final int SECOND_30 = 30 * 1000;
+
+
+    public static String timeFormat(long timeStamp, long currentTime) {
+        long timeGap = currentTime - timeStamp;
+
+        if (timeGap >= DAY_20) {
+            return new SimpleDateFormat("yyyy年MM月dd日").format(timeStamp);
+        } else if (timeGap < DAY_20 && timeGap >= DAY_13) {
+            return "3周前";
+        } else if (timeGap < DAY_13 && timeGap >= DAY_7) {
+            return "2周前";
+        } else if (timeGap < DAY_7 && timeGap >= DAY_1) {
+            //小于7天 大于1天
+            int day = (int) (timeGap / DAY_1);
+            return day + "天";
+        } else if (timeGap < DAY_1) {
+            //小于1天
+            if (timeGap >= HOUR_1) {
+
+                float hours = (float) ((timeGap) * 1.0 / (HOUR_1));
+                System.out.println("hour:" + hours);
+                //N个小时30分钟
+                float HOURS_HAFL = ((int) hours * HOUR_1 + MINUTE_30);
+                long hh = (long) HOURS_HAFL;
+                System.out.println("haft:" + hh + ",gap:" + timeGap);
+
+                if (timeGap >= HOURS_HAFL) {
+                    if (hours >= 23) {
+                        return "一天前";
+                    } else {
+                        //超过半小时
+                        return ((int) hours + 1) + "小时";
+                    }
+                } else {
+                    return (int) hours + "小时";
+                }
+            } else {
+                //小于一小时 & 大于一分钟
+                if (timeGap >= MINUTE_1) {
+
+                    //多少分钟
+                    float minutes = (float) ((timeGap) * 1.0 / (MINUTE_1));
+                    System.out.println("min:" + minutes);
+
+                    //N分钟30秒
+                    float MINUTES_HAFL = ((int) minutes * MINUTE_1 + SECOND_30);
+
+                    System.out.println("haft:" + MINUTES_HAFL + ",gap:" + timeGap);
+
+                    if (timeGap >= MINUTES_HAFL) {
+                        if (minutes >= 59) {
+                            return "1小时前";
+                        } else {
+                            return ((int) minutes + 1) + "分钟前";
+                        }
+                    } else {
+                        return (int) minutes + "分钟前";
+                    }
+                } else {
+                    return "刚刚";
+                }
+            }
+        }
+        return new SimpleDateFormat("yyyy年MM月dd日").format(timeStamp);
+    }
+
+    /**
+     * 测试时间格式化
+     */
+    @Test
+    public void test2() {
+        long now = System.currentTimeMillis() + MINUTE_1 * 60 * 23 + MINUTE_1 * 30;
+
+        long old = System.currentTimeMillis();
+
+
+        System.out.println(now - old);
+
+        System.out.println(timeFormat(old, now));
+
+    }
+
+
 }
