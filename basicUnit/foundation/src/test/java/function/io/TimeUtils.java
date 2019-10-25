@@ -2,6 +2,7 @@ package function.io;
 
 import org.junit.Test;
 
+import java.awt.CardLayout;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -231,6 +232,41 @@ public class TimeUtils {
 
         System.out.println(timeFormat(old, now));
 
+    }
+
+
+    public static String messageTimeFormat(long timeStamp, long currentTime) {
+        Calendar c1 = Calendar.getInstance();
+        c1.setTimeInMillis(timeStamp);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.setTimeInMillis(currentTime);
+
+        if (c1.get(Calendar.YEAR) == c2.get(Calendar.YEAR)) {
+            System.out.println("同一年");
+            long timeGap = currentTime - timeStamp;
+            //大于两天
+            if (timeGap >= DAY_1 * 2) {
+                return new SimpleDateFormat("MM月dd日 HH:mm").format(timeStamp);
+            } else {
+                if (timeGap >= DAY_1) {
+                    return new SimpleDateFormat("昨天 HH:mm").format(timeStamp);
+                } else {
+                    return new SimpleDateFormat("HH:mm").format(timeStamp);
+                }
+            }
+        } else {
+            return new SimpleDateFormat("yyyy年MM月dd日").format(timeStamp);
+        }
+    }
+
+    @Test
+    public void test3() {
+        long now = System.currentTimeMillis() + DAY_1 * 1000;
+
+        long old = System.currentTimeMillis();
+
+        System.out.println(messageTimeFormat(old, 1540451478000L));
     }
 
 
