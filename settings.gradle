@@ -1,4 +1,4 @@
-include ':app', ':thread',
+include ':thread', ':fundationapp',
         ':basicUnit:foundation',
         ':dataStructure:LinkedList',
         ':classicBook:chapter_20',
