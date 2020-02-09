@@ -58,9 +58,9 @@ public class IOEnvTest {
         System.out.println(System.getProperty("user.dir"));
 
         /**
-         * 判断工程目录下，build.gradle是否存在
+         * 判断工程目录下，BUILD.gradle是否存在
          */
-        String path = System.getProperty("user.dir") + File.separator + "build.gradle";
+        String path = System.getProperty("user.dir") + File.separator + "BUILD.gradle";
         File file = new File(path);
 
         System.out.println(file.getAbsolutePath());
