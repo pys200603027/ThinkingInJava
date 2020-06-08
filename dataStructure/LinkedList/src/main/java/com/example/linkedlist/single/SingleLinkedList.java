@@ -21,14 +21,15 @@ public class SingleLinkedList {
      * @return
      */
     public Object addHead(Object obj) {
-        Node newHead = new Node(obj);
+        Node newNode = new Node(obj);
         if (size == 0) {
-            head = newHead;
+            head = newNode;
         } else {
-            newHead.setNext(head);
-            head = newHead;
+            newNode.setNext(head);
+            head = newNode;
         }
         size++;
+
         return obj;
     }
 

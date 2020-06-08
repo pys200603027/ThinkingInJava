@@ -3,7 +3,7 @@ package com.example.linkedlist;
 public class Node {
     private Object data;
     private Node next;
-    private Node Prev;
+    private Node prev;
 
     public Node(Object data) {
         this.data = data;
@@ -14,11 +14,11 @@ public class Node {
     }
 
     public Node getPrev() {
-        return Prev;
+        return prev;
     }
 
     public void setPrev(Node prev) {
-        Prev = prev;
+        this.prev = prev;
     }
 
     public Object getData() {
