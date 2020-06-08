@@ -83,4 +83,73 @@ public class StandforTest {
             current = current.getNext();
         }
     }
+
+    @Test
+    public void test6() {
+        StanfordLinkList linkList = new StanfordLinkList();
+
+        linkList.push(new Node<Integer>(1));
+        linkList.push(new Node<Integer>(2));
+        linkList.push(new Node<Integer>(3));
+        linkList.push(new Node<Integer>(4));
+        linkList.push(new Node<Integer>(5));
+
+        Node head = linkList.getHead();
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.getData());
+            current = current.getNext();
+        }
+        System.out.println();
+
+        Node newHead = linkList.reverseList(linkList.getHead());
+        while (newHead != null) {
+            System.out.print(newHead.getData());
+            newHead = newHead.getNext();
+        }
+    }
+
+    @Test
+    public void test7() {
+        StanfordLinkList linkList = new StanfordLinkList();
+        linkList.push4(new Node(1));
+        linkList.push4(new Node(2));
+        linkList.push4(new Node(3));
+        linkList.push4(new Node(4));
+        linkList.push4(new Node(5));
+
+
+        Node current = linkList.getHead();
+        while (current != null) {
+            System.out.print(current.getData());
+            current = current.getNext();
+        }
+    }
+
+    @Test
+    public void test8() {
+        StanfordLinkList linkList = new StanfordLinkList();
+        linkList.push(new Node(5));
+        linkList.push(new Node(4));
+        linkList.push(new Node(3));
+        linkList.push(new Node(2));
+        linkList.push(new Node(1));
+
+        print(linkList.getHead());
+
+        linkList.reverseList2(linkList.getHead());
+        print(linkList.getHead());
+
+    }
+
+
+    public void print(Node head) {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.getData());
+            current = current.getNext();
+        }
+
+        System.out.println();
+    }
 }
