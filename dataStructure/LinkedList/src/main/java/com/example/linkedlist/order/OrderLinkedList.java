@@ -20,16 +20,19 @@ public class OrderLinkedList {
         Node pre = null;
         Node current = head;
 
+        //寻找第一个比该value da的节点
         while (current != null && value > current.data) {
-            //记录了前面
+            //记录当前节点
             pre = current;
             current = current.next;
         }
 
+        //如果找不到（附到header之前）
         if (pre == null) {
             head = node;
             node.next = current;
         } else {
+            //如果找到了，指针重组
             pre.next = node;
             node.next = current;
         }

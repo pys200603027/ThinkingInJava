@@ -6,8 +6,11 @@ import com.example.linkedlist.Node;
  * 双向链表
  */
 public class TwoWayLinkedList {
+
+
     private Node head;
     private Node tail;
+
     private int size;
 
 

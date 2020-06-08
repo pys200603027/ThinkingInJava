@@ -33,4 +33,8 @@ public class Node {
     public String toString() {
         return "obj:" + data;
     }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
 }

@@ -22,20 +22,23 @@ public class SingleLinkedList {
      */
     public Object addHead(Object obj) {
         Node newNode = new Node(obj);
-        if (size == 0) {
-            head = newNode;
-        } else {
-            newNode.setNext(head);
-            head = newNode;
-        }
+        newNode.setNext(head);
+        head = newNode;
         size++;
 
         return obj;
     }
 
+    /**
+     * 这个查找
+     *
+     * @param obj
+     * @return
+     */
     public Node find(Object obj) {
         Node current = head;
         int tempSize = size;
+
         while (tempSize > 0) {
             if (obj.equals(current.getData())) {
                 return current;
@@ -43,6 +46,18 @@ public class SingleLinkedList {
                 current = head.getNext();
             }
             tempSize--;
+        }
+        return null;
+    }
+
+    public Node find2(Object obj) {
+        Node current = head;
+
+        while (current != null) {
+            if (obj.equals(current.getData())) {
+                return current;
+            }
+            current = current.getNext();
         }
         return null;
     }
@@ -58,7 +73,15 @@ public class SingleLinkedList {
         }
 
         Object data = head.getData();
-        head = head.getNext();
+        Node temp = head.getNext();
+
+        //数据清除
+        head.setNext(null);
+        head.setData(null);
+        head.setPrev(null);
+
+        //将数据传给head
+        head = temp;
 
         size--;
         return data;
@@ -80,7 +103,7 @@ public class SingleLinkedList {
             return;
         }
 
-        while (tempSize > 0) {
+        while (node != null) {
             if (node.equals(head)) {
                 System.out.print("[" + node + "->");
             } else if (node.getNext() == null) {
@@ -89,7 +112,6 @@ public class SingleLinkedList {
                 System.out.print(node + "->");
             }
             node = node.getNext();
-            tempSize--;
         }
         System.out.println();
     }
