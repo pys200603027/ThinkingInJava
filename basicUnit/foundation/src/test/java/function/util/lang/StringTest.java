@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
+import java.lang.annotation.Target;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -299,6 +300,21 @@ public class StringTest {
         final char value[] = {'1', '2', '3'};
 
         value[0] = '0';
+
+    }
+
+    @Test
+    public void test4() {
+        String name1 = "10000789";
+        String name2 = "12220889";
+
+        System.out.println(name1.charAt(name1.length() - 1));
+
+        if (name1.charAt(name1.length() - 1) == name2.charAt(name2.length() - 1)) {
+            System.out.println("match");
+        } else {
+            System.out.println("no");
+        }
 
     }
 }
